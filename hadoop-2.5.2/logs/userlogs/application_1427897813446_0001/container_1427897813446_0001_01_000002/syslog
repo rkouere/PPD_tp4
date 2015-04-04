@@ -1,0 +1,73 @@
+2015-04-01 16:21:22,512 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2015-04-01 16:21:22,534 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2015-04-01 16:21:22,748 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-04-01 16:21:22,825 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-04-01 16:21:22,881 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-04-01 16:21:22,881 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-04-01 16:21:22,889 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-04-01 16:21:22,889 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1427897813446_0001, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@11563a4)
+2015-04-01 16:21:22,937 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-04-01 16:21:23,154 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /tmp/hadoop-echallier/nm-local-dir/usercache/echallier/appcache/application_1427897813446_0001
+2015-04-01 16:21:23,243 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+2015-04-01 16:21:23,251 WARN [main] org.apache.hadoop.conf.Configuration: job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+2015-04-01 16:21:23,445 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-04-01 16:21:23,727 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-04-01 16:21:23,911 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/echallier/ana/words:0+342304
+2015-04-01 16:21:23,920 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-04-01 16:21:23,957 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-04-01 16:21:23,957 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-04-01 16:21:23,957 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-04-01 16:21:23,957 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-04-01 16:21:23,957 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-04-01 16:21:24,277 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-04-01 16:21:24,278 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-04-01 16:21:24,278 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 684608; bufvoid = 104857600
+2015-04-01 16:21:24,278 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26088104(104352416); length = 126293/6553600
+2015-04-01 16:22:08,174 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-04-01 16:22:08,175 INFO [main] org.apache.hadoop.mapred.MapTask: (RESET) equator 0 kv 26214396(104857584) kvi 26088100(104352400)
+2015-04-01 16:22:08,175 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-04-01 16:22:08,175 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 684608; bufvoid = 104857600
+2015-04-01 16:22:08,175 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26088104(104352416); length = 126293/6553600
+2015-04-01 16:22:08,176 INFO [main] org.apache.hadoop.mapred.MapTask: Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@ea303e
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for attempt_1427897813446_0001_m_000000_0_spill_0.out
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathForWrite(LocalDirAllocator.java:402)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:150)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:131)
+	at org.apache.hadoop.mapred.YarnOutputFiles.getSpillFileForWrite(YarnOutputFiles.java:159)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1566)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1462)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:700)
+	at org.apache.hadoop.mapred.MapTask.closeQuietly(MapTask.java:1990)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:774)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:340)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:168)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1614)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:163)
+2015-04-01 16:22:08,178 FATAL [main] org.apache.hadoop.mapred.YarnChild: FSError from child
+org.apache.hadoop.fs.FSError: java.io.IOException: No space left on device
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.write(RawLocalFileSystem.java:226)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:157)
+	at org.apache.hadoop.fs.FSDataOutputStream$PositionCache.close(FSDataOutputStream.java:72)
+	at org.apache.hadoop.fs.FSDataOutputStream.close(FSDataOutputStream.java:106)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1644)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1462)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:700)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:770)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:340)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:168)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1614)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:163)
+Caused by: java.io.IOException: No space left on device
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:345)
+	at org.apache.hadoop.fs.RawLocalFileSystem$LocalFSFileOutputStream.write(RawLocalFileSystem.java:224)
+	... 15 more
+2015-04-01 16:22:08,282 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2015-04-01 16:22:08,282 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2015-04-01 16:22:08,282 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.

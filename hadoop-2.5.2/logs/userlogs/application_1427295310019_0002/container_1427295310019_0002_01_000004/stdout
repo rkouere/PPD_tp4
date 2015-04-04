@@ -1,0 +1,2 @@
+OpenJDK Server VM warning: You have loaded library /home/m1/echallier/fac/m2/PPD/TP4/hadoop-2.5.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
